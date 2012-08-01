@@ -10,16 +10,27 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.mobile.min.js"></script>
 
+	<script src="js/jquery.retina.min.js"></script>
+
 	<link rel="stylesheet" href="css/appStyle.css" />
+
+	<script>
+    $(document).ready(function() {
+      $('#home img').retina();
+      $('#next img').retina();
+
+
+    });
+  </script>
 
 </head>
 <body>
 	<div data-role="page" id="home">
-		<a href="#next" data-transition="turn"><img src="img/a.png" alt=""></a>
+		<a href="#next" data-transition="slide"><img src="img/a.png" width="320" height="480" data-retina="img/a2x.png" alt=""></a>
 	</div><!--page-->
 
 	<div data-role="page" id="next">
-		<a href="#home" data-transition="turn"><img src="img/b.png" alt=""></a>
+		<a href="#home" data-transition="slide"><img src="img/b.png" width="320" height="480" data-retina="img/b2x.png"alt=""></a>
 	</div><!--page-->
 
 </body>
